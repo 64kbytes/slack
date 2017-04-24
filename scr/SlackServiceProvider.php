@@ -25,6 +25,8 @@ class SlackServiceProvider extends ServiceProvider
     public function register()
     {
         // register package events
-        $this->app->singleton('Client', 'Baytree\Slack\Client');
+        $this->app->singleton('FooBar', function($app){
+            return new Baytree\Slack\Client();
+        });
     }
 }
