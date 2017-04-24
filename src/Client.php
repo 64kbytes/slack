@@ -2,12 +2,10 @@
 
 namespace Baytree\Slack;
 
-class Client()
+class Client
 {
 	public function __construct()
 	{
 
 	}
 }
-
-?>
