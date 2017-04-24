@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Baytree\\Slack\\": "packages/baytree/slack/src"
+            "Baytree\\Slack\\": "src/"
         }
     }
 }
