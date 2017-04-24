@@ -1,0 +1,18 @@
+{
+    "name": "baytree/slack",
+    "description": "A thin wrapper around slack API",
+    "authors": [
+        {
+            "name": "M Yacobs",
+            "email": "marceloy@helobaytree.com"
+        }
+    ],
+    "require": {
+    	"guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Baytree\\Slack\\": "packages/baytree/slack/src"
+        }
+    }
+}
