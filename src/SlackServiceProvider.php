@@ -28,7 +28,7 @@ class SlackServiceProvider extends ServiceProvider
     {
         // register package events
         $this->app->singleton('Client', function($app){
-            return new Baytree\Slack\Client();
+            return new Baytree\Slack\Client($app['\GuzzleHttp\Client']);
         });
     }
 }
