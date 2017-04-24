@@ -1,5 +1,5 @@
 {
-    "name": "64kbytes/slack",
+    "name": "Baytree/slack",
     "description": "A thin wrapper around slack API",
     "authors": [
         {
@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "64kbytes\\Slack\\": "src/"
+            "Baytree\\Slack\\": "src/"
         }
     }
 }
