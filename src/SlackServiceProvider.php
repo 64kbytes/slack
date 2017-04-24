@@ -4,8 +4,6 @@ namespace Baytree\Slack;
 
 use Illuminate\Support\ServiceProvider;
 
-use Baytree\Slack\Client;
-
 class SlackServiceProvider extends ServiceProvider
 {
     /**
@@ -28,7 +26,7 @@ class SlackServiceProvider extends ServiceProvider
     {
         // register package events
         $this->app->singleton('Client', function($app){
-            return new Baytree\Slack\Client($app['\GuzzleHttp\Client']);
+            return new Baytree\Slack\Client(new \GuzzleHttp\Client);
         });
     }
 }
