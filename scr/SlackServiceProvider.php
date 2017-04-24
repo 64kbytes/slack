@@ -4,6 +4,8 @@ namespace Baytree\Slack;
 
 use Illuminate\Support\ServiceProvider;
 
+use Baytree\Slack\Client;
+
 class SlackServiceProvider extends ServiceProvider
 {
     /**
