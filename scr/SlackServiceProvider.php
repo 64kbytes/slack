@@ -1,6 +1,6 @@
 <?php
 
-namespace Baytree\Slack;
+namespace 64kbytes\Slack;
 
 use Illuminate\Support\ServiceProvider;
 
