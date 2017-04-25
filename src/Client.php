@@ -18,13 +18,14 @@ class Client
 		
 		$quote = json_decode((string) $response->getBody());
 		$quote = $quote[0];
-		$quote->content = strip_tags($quote->content);
+		$quote->content = html_entity_decode(strip_tags($quote->content));
+		$quote->title = html_entity_decode($quote->title);
 		return "{$quote->content} - {$quote->title}";
 	}
 
 	protected function post($message)
 	{
-		$r = $this->http->post('https://hooks.slack.com/services/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', [
+		$r = $this->http->post(\Config::get('slack.credentials.url'), [
             'json' => $message
         ]);
 	}
@@ -45,6 +46,9 @@ class Client
 
             $this->post($fallback_msg);
 
+	    }
+	    catch(\GuzzleHttp\Exception\ConnectException $e){
+	    	throw $e;
 	    }
 	}
 }

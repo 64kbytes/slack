@@ -14,7 +14,10 @@ class SlackServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        
+        // 'https://hooks.slack.com/services/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'
+        $this->publishes([
+            __DIR__ . '/config' => config_path('slack'),
+        ]);
     }
 
     /**
