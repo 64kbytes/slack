@@ -14,7 +14,7 @@ class SlackServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        //require __DIR__ . '/../vendor/autoload.php';
+        
     }
 
     /**
@@ -24,9 +24,13 @@ class SlackServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
+        require __DIR__ . '/../vendor/autoload.php';
+            
         // register package events
-        $this->app->singleton('Client', function($app){
+        $this->app->singleton('Slack', function($app){
             return new Baytree\Slack\Client(new \GuzzleHttp\Client);
         });
+    
     }
 }
