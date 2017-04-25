@@ -28,7 +28,7 @@ class SlackServiceProvider extends ServiceProvider
     public function register()
     {
 
-        require __DIR__ . '/../vendor/autoload.php';
+        //require __DIR__ . '/../vendor/autoload.php';
             
         // register package events
         $this->app->singleton('Slack', function($app){
