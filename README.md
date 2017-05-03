@@ -1,6 +1,6 @@
-# KnowItFirst
+# Slack
 
-Be the first to know when shit hits the fan. This package will catch the exceptions thrown by your crappy Laravel site and send you an annoying message to your Slack. Happy debugging!
+A thin wrapper around Slack API
 
 ## Install packages from Github
 
@@ -10,20 +10,16 @@ Edit */composer.json* in your project root folder
 "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/64kbytes/knowitfirst"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/64kbytes/slack"
         }
     ]
 ```
-Requiring KnowitFirst from Github we need to require also it's dependencies. Please refer to [Why can't Composer load repositories recursively?](https://getcomposer.org/doc/faqs/why-can%27t-composer-load-repositories-recursively.md)
+> Requiring a package from Github we need to require also it's dependencies. Please refer to [Why can't Composer load repositories recursively?](https://getcomposer.org/doc/faqs/why-can%27t-composer-load-repositories-recursively.md)
 
 Then edit */config/app.php*
 ```php
 'providers' => [
-	Baytree\KnowItFirst\KnowItFirstServiceProvider::class
+    Baytree\Slack\SlackServiceProvider::class
 ]
 ```
 
