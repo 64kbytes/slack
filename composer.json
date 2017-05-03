@@ -14,5 +14,11 @@
         "psr-4": {
             "Baytree\\Slack\\": "src/"
         }
+    },
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*"
+    },
+     "scripts": {
+        "makedoc": "./vendor/phpdocumentor/phpdocumentor/bin/phpdoc -d ./src -t docs"
     }
 }
